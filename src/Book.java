@@ -17,8 +17,8 @@ public class Book {
     // TODO: Implement copy constructor
     public Book(Book other) {
         this.title = other.title;
-        this.author = author;
-        this.year = year;
+        this.author = other.author;
+        this.year = other.year;
         // implement
     }
 
