@@ -9,6 +9,10 @@ public class EBook extends Book {
         // implement
     }
 
+    public double getFilesize() {
+        return filesize;
+    }
+    
     // TODO: Override toString()
     @Override
     public String toString() {
