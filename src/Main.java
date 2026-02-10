@@ -26,10 +26,20 @@ public class Main {
             switch (choice) {
 
                 case 1:
+                    System.out.println("Title : "); String t = scanner.nextLine();
+                    System.out.println("Author :"); String a = scanner.nextLine();
+                    System.out.println("Year :"); int y = scanner.nextInt();
+                    library.addBook(new Book(t, a, y));
                     // TODO: Read input and add Book
                     break;
 
                 case 2:
+                    System.out.println("Title :"); String t1 = scanner.nextLine();
+                    System.out.println("Author :"); String a1 = scanner.nextLine();
+                    System.out.println("Year : "); int y1 = scanner.nextInt();
+                    System.out.println("File size :"); double f = scanner.nextDouble();
+                    EBook book = new EBook(t1, a1, y1, f);
+                    library.addBook(book);
                     // TODO: Read input and add EBook
                     break;
 
@@ -38,14 +48,20 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.println("Title of book :"); String t2 = scanner.nextLine();
+                    library.searchByTitle(t2);
                     // TODO: Search book
                     break;
 
                 case 5:
+                    System.out.println("Title :"); String t3 = scanner.nextLine();
+                    library.borrowBook(t3);
                     // TODO: Borrow book
                     break;
 
                 case 6:
+                    System.out.println("Title :"); String t4 = scanner.nextLine();
+                    library.returnBook(t4);
                     // TODO: Return book
                     break;
 
@@ -58,6 +74,7 @@ public class Main {
             }
 
         } while (choice != 7);
+
 
         scanner.close();
     }
